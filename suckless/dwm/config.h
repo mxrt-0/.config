@@ -21,9 +21,9 @@ static const char col_green[] = "#00FF00";
 static const char col_light_grey[] = "#999999";
 static const char *colors[][3] = {
     /*               fg				 bg         border   */
-    [SchemeNorm] = {col_white, col_black, col_light_grey},
-    [SchemeSel] = {col_light_grey, col_black, col_white}};
-
+    [SchemeNorm] = {col_white, col_black, col_white},
+    [SchemeSel] = {col_light_grey, col_black, col_light_grey},
+};
 /* tagging */
 static const char *tags[] = {"!", "@", "#", "$", "%"};
 
@@ -79,7 +79,8 @@ static const char *dmenucmd[] = {"dmenu_run",    "-m",  dmenumon,  "-fn",
 static const char *termcmd[] = {"st", NULL};
 static const char *slockcmd[] = {"slock", NULL};
 static const char *greenclipcmd[] = {"/home/mxrt-0/.config/greenclip.sh", NULL};
-static const char *flameshotguicmd[] = {"/home/mxrt-0/.config/flameshotgui.sh", NULL};
+static const char *flameshotguicmd[] = {"/home/mxrt-0/.config/flameshotgui.sh",
+                                        NULL};
 static const char *upvolcmd[] = {"/usr/bin/pactl", "set-sink-volume",
                                  "@DEFAULT_SINK@", "+5%", NULL};
 static const char *downvolcmd[] = {"/usr/bin/pactl", "set-sink-volume",

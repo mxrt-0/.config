@@ -12,21 +12,14 @@ return {
 		lspconfig.lua_ls.setup({})
 
 		-------------------------------------------------------------
-		----- Pyhon language server --------------------------------
+		----- Python language server --------------------------------
 		-------------------------------------------------------------
 		lspconfig.pyright.setup({
 			capabilities = capabilities,
 			settings = {
-				pyright = {
-					-- Using Ruff's import organizer
-					disableOrganizeImports = true,
-				},
+				pyright = {},
 			},
 		})
-		lspconfig.ruff.setup({
-			capabilities = capabilities,
-		})
-
 		-------------------------------------------------------------
 		----- Go language server ------------------------------------
 		-------------------------------------------------------------

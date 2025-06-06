@@ -18,7 +18,6 @@ return {
 				-------------------------------------------------------------
 				----- Ensure Python tools installed -------------------------
 				-------------------------------------------------------------
-				"ruff",
 				"black",
 
 				-------------------------------------------------------------
@@ -37,7 +36,7 @@ return {
 				"shellcheck",
 				"shfmt",
 			},
-			automatic_installation = true
+			automatic_installation = true,
 		})
-	end
+	end,
 }

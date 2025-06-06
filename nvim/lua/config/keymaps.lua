@@ -33,7 +33,7 @@ vim.keymap.set("v", "<Right>", "<Nop>", opts)
 ----------------------------------------------------------------
 ----- Nvim-tree keybindings ------------------------------------
 ----------------------------------------------------------------
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 vim.keymap.set("n", "<c-h>", "<c-w>h", opts)
 vim.keymap.set("n", "<c-j>", "<c-w>j", opts)
 vim.keymap.set("n", "<c-k>", "<c-w>k", opts)
@@ -41,8 +41,8 @@ vim.keymap.set("n", "<c-l>", "<c-w>l", opts)
 ----------------------------------------------------------------
 ----- Bufferline keybindings -----------------------------------
 ----------------------------------------------------------------
-vim.keymap.set("n", "<tab>", ":BufferlinecyCleNext<cr>", opts)
-vim.keymap.set("n", "<s-tab>", ":BufferlineCyclePrev<cr>", opts)
+vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", opts)
+vim.keymap.set("n", "<S-tab>", ":BufferLineCyclePrev<CR>", opts)
 ----------------------------------------------------------------
 ----- Telescope keybindings ------------------------------------
 ----------------------------------------------------------------
