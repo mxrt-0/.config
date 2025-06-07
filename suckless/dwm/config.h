@@ -21,8 +21,8 @@ static const char col_green[] = "#00FF00";
 static const char col_light_grey[] = "#999999";
 static const char *colors[][3] = {
     /*               fg				 bg         border   */
-    [SchemeNorm] = {col_white, col_black, col_white},
-    [SchemeSel] = {col_light_grey, col_black, col_light_grey},
+    [SchemeNorm] = {col_white, col_black, col_light_grey},
+    [SchemeSel] = {col_light_grey, col_black, col_white},
 };
 /* tagging */
 static const char *tags[] = {"!", "@", "#", "$", "%"};
@@ -105,8 +105,10 @@ static const Key keys[] = {
     {MODKEY, XK_o, incnmaster, {.i = -1}},
     {MODKEY | ShiftMask, XK_h, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_l, setmfact, {.f = +0.05}},
-    {MODKEY, XK_h, setcfact, {.f = +0.05}},
-    {MODKEY, XK_l, setcfact, {.f = -0.05}},
+    // {MODKEY, XK_h, setcfact, {.f = +0.05}},
+    // {MODKEY, XK_l, setcfact, {.f = -0.05}},
+    {MODKEY, XK_h, setmfact, {.f = +0.05}},
+    {MODKEY, XK_l, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_o, setcfact, {.f = 0.00}},
     {MODKEY | ShiftMask, XK_Return, zoom, {0}},
     /*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },
