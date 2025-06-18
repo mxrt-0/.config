@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx = 2; /* border pixel of windows */
+static const unsigned int borderpx = 3; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
 static const unsigned int gappih = 0;   /* horiz inner gap between windows */
 static const unsigned int gappiv = 0;   /* vert inner gap between windows */
@@ -17,15 +17,17 @@ static const char *fonts[] = {"FiraCode Nerd Font Mono:weight=bold:size=16"};
 static const char dmenufont[] = "FiraCode Nerd Font Mono:weight=bold:size=16";
 static const char col_black[] = "#000000";
 static const char col_white[] = "#FFFFFF";
-static const char col_green[] = "#00FF00";
-static const char col_light_grey[] = "#999999";
+// static const char col_green[] = "#00FF00";
+// static const char col_light_grey[] = "#999999";
+static const char col_light_grey[] = "#BFBFBF";
+static const char col_dark_grey[] = "#3A3A3A";
 static const char *colors[][3] = {
     /*               fg				 bg         border   */
-    [SchemeNorm] = {col_white, col_black, col_light_grey},
-    [SchemeSel] = {col_light_grey, col_black, col_white},
+    [SchemeNorm] = {col_dark_grey, col_white, col_light_grey},
+    [SchemeSel] = {col_light_grey, col_white, col_dark_grey},
 };
 /* tagging */
-static const char *tags[] = {"!", "@", "#", "$", "%"};
+static const char *tags[] = {"!", "@", "#"};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -73,8 +75,8 @@ static const Layout layouts[] = {
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = {"dmenu_run",    "-m",  dmenumon,  "-fn",
-                                 dmenufont,      "-nb", col_black, "-nf",
-                                 col_white,      "-sb", col_black, "-sf",
+                                 dmenufont,      "-nb", col_white, "-nf",
+                                 col_black,      "-sb", col_white, "-sf",
                                  col_light_grey, NULL};
 static const char *termcmd[] = {"st", NULL};
 static const char *slockcmd[] = {"slock", NULL};
@@ -105,10 +107,10 @@ static const Key keys[] = {
     {MODKEY, XK_o, incnmaster, {.i = -1}},
     {MODKEY | ShiftMask, XK_h, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_l, setmfact, {.f = +0.05}},
-    // {MODKEY, XK_h, setcfact, {.f = +0.05}},
-    // {MODKEY, XK_l, setcfact, {.f = -0.05}},
-    {MODKEY, XK_h, setmfact, {.f = +0.05}},
-    {MODKEY, XK_l, setmfact, {.f = -0.05}},
+    {MODKEY, XK_h, setcfact, {.f = +0.05}},
+    {MODKEY, XK_l, setcfact, {.f = -0.05}},
+    // {MODKEY, XK_h, setmfact, {.f = +0.05}},
+    // {MODKEY, XK_l, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_o, setcfact, {.f = 0.00}},
     {MODKEY | ShiftMask, XK_Return, zoom, {0}},
     /*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },

@@ -7,7 +7,7 @@
  */
 static char *font =
     "FiraCode Nerd Font "
-    "Mono:weight=regular:pixelsize=18:antialias=true:autohint=true";
+    "Mono:weight=medium:pixelsize=18:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,31 +96,92 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* Terminal colors (16 first used in escape sequence) */
+// static const char *colorname[] = {
+//
+//     /* 8 normal colors */
+//     [0] = "#000000", /* black   */
+//     [1] = "#b78282", /* red     */
+//     [2] = "#a4af40", /* green   */
+//     [3] = "#de935f", /* yellow  */
+//     [4] = "#5f819d", /* blue    */
+//     [5] = "#9230b1", /* magenta */
+//     [6] = "#3b6f6f", /* cyan    */
+//     [7] = "#707880", /* white   */
+//
+//     /* 8 bright colors */
+//     [8] = "#ffffff",  /* black   */
+//     [9] = "#7e7e7e",  /* red     */
+//     [10] = "#a0a759", /* green   */
+//     [11] = "#9e9d32", /* yellow  */
+//     [12] = "#ffffff", /* blue    */
+//     [13] = "#b85fb8", /* magenta */
+//     [14] = "#ffffff", /* cyan    */
+//     [15] = "#06d2d2", /* white   */
+//
+//     /* special colors */
+//     [256] = "0000000", /* background */
+//     [257] = "#ffffff", /* foreground */
+// };
+/* Monochrome terminal colors with white background */
+// static const char *colorname[] = {
+//
+//     /* 8 normal colors (dark grays to black) */
+//     [0] = "#000000", /* black (strongest dark) */
+//     [1] = "#555555", /* dark gray 1 */
+//     [2] = "#777777", /* dark gray 2 */
+//     [3] = "#999999", /* medium gray 1 */
+//     [4] = "#bbbbbb", /* medium gray 2 */
+//     [5] = "#cccccc", /* light gray 1 */
+//     [6] = "#dddddd", /* light gray 2 */
+//     [7] = "#eeeeee", /* very light gray */
+//
+//     /* 8 bright colors (lighter shades toward white) */
+//     [8] = "#bbbbbb",  /* gray 3 */
+//     [9] = "#999999",  /* gray 1 */
+//     [10] = "#777777", /* gray 2 */
+//     [11] = "#555555", /* gray 4 */
+//     [12] = "#333333", /* gray 5 */
+//     [13] = "#111111", /* near black */
+//     [14] = "#444444", /* gray 6 */
+//     [15] = "#000000", /* black */
+//
+//     /* special colors */
+//     [256] = "#ffffff", /* background (white) */
+//     [257] = "#000000", /* foreground (black) */
+// };
+//
+/* Monochrome terminal colors with white background and lighter
+ * cursor/highlights */
 static const char *colorname[] = {
 
-    /* 8 normal colors */
-    [0] = "#000000", /* black   */
-    [1] = "#b78282", /* red     */
-    [2] = "#a4af40", /* green   */
-    [3] = "#de935f", /* yellow  */
-    [4] = "#5f819d", /* blue    */
-    [5] = "#9230b1", /* magenta */
-    [6] = "#3b6f6f", /* cyan    */
-    [7] = "#707880", /* white   */
+    /* 8 normal colors (dark grays to black) */
+    [0] = "#000000", /* black (strongest dark) */
+    [1] = "#555555", /* dark gray 1 */
+    [2] = "#777777", /* dark gray 2 */
+    [3] = "#999999", /* medium gray 1 */
+    [4] = "#bbbbbb", /* medium gray 2 */
+    [5] = "#cccccc", /* light gray 1 */
+    [6] = "#dddddd", /* light gray 2 */
+    [7] = "#eeeeee", /* very light gray */
 
-    /* 8 bright colors */
-    [8] = "#ffffff",  /* black   */
-    [9] = "#7e7e7e",  /* red     */
-    [10] = "#a0a759", /* green   */
-    [11] = "#9e9d32", /* yellow  */
-    [12] = "#ffffff", /* blue    */
-    [13] = "#b85fb8", /* magenta */
-    [14] = "#ffffff", /* cyan    */
-    [15] = "#06d2d2", /* white   */
+    /* 8 bright colors (lighter shades toward white) */
+    [8] = "#bbbbbb",  /* gray 3 */
+    [9] = "#999999",  /* gray 1 */
+    [10] = "#777777", /* gray 2 */
+    [11] = "#555555", /* gray 4 */
+    [12] = "#333333", /* gray 5 */
+    [13] = "#111111", /* near black */
+    [14] = "#444444", /* gray 6 */
+    [15] = "#000000", /* black */
 
     /* special colors */
-    [256] = "#000000", /* background */
-    [257] = "#ffffff", /* foreground */
+    [256] = "#ffffff", /* background (white) */
+    [257] = "#000000", /* foreground (black) */
+
+    /* cursor and other special elements */
+    [258] = "#bbbbbb", /* cursor color (light gray) */
+    [259] = "#999999", /* cursor text color (medium gray) */
+    [260] = "#cccccc", /* selection color (lighter gray) */
 };
 
 /*

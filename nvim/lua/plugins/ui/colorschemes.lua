@@ -1,11 +1,11 @@
 ----------------------------------
------ Monochrome colorscheme -----
+----- Monochrome colorschemes ----
 ----------------------------------
 return {
-	"andreypopp/vim-colors-plain",
+	"ntk148v/komau.vim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme plain]])
+		vim.o.background = "light", vim.cmd([[colorscheme komau]])
 	end,
 }

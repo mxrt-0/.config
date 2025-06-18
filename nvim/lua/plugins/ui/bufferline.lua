@@ -3,11 +3,11 @@ return {
 	version = "*",
 	dependencies = "nvim-tree/nvim-web-devicons",
 	config = function()
-		require("bufferline").setup{
+		require("bufferline").setup({
 			options = {
 				mode = "buffers",
-				separator_style = "slant"
-			}
-		}
-	end
+				separator_style = "slant",
+			},
+		})
+	end,
 }
