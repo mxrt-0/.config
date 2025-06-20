@@ -1,0 +1,50 @@
+let mapleader = " "
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+Plug 'plan9-for-vimspace/acme-colors'
+Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-commentary'
+call plug#end()
+
+
+" Options 
+set encoding=UTF-8
+set clipboard=unnamedplus        
+set mouse=                      " disable mouse
+set tabstop=4                   " number of visual spaces per TAB
+set softtabstop=4               " npaces when pressing tab in insert mode
+set shiftwidth=4                " number of spaces for auto-indent
+set expandtab                   " use spaces instead of tabs
+set number                      " show absolute line numbers
+set relativenumber              " show relative numbers
+set nocursorline                  " highlight current line
+set splitbelow                  " horizontal split opens below
+set splitright                  " vertical split opens right
+set termguicolors               " enable true color support
+set incsearch                   " incremental search
+set nohlsearch                  " don't highlight matches
+set ignorecase                  " case insensitive by default
+set smartcase                   " but case-sensitive if uppercase used
+set noshowmode
+set modifiable
+set laststatus=2 
+
+" UI
+syntax on
+filetype plugin indent on
+set background=light
+let g:lightline={ 'colorscheme':'Tomorrow'}
+colorscheme acme
+
+" Keymaps 
+nnoremap <silent><leader>i :source ~/.vimrc \| :PlugInstall<CR> 
+nnoremap <silent><leader>ls :Buffers<CR>                        
+nnoremap <silent><leader>ff :Files<CR>                          

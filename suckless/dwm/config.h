@@ -23,8 +23,8 @@ static const char col_light_grey[] = "#BFBFBF";
 static const char col_dark_grey[] = "#3A3A3A";
 static const char *colors[][3] = {
     /*               fg				 bg         border   */
-    [SchemeNorm] = {col_dark_grey, col_white, col_light_grey},
-    [SchemeSel] = {col_light_grey, col_white, col_dark_grey},
+    [SchemeNorm] = {col_dark_grey, col_white, col_white},
+    [SchemeSel] = {col_light_grey, col_white, col_light_grey},
 };
 /* tagging */
 static const char *tags[] = {"!", "@", "#"};
@@ -40,7 +40,7 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact = 0.55; /* factor of master area size [0.05..0.95] */
+static const float mfact = 0.50; /* factor of master area size [0.05..0.95] */
 static const int nmaster = 1;    /* number of clients in master area */
 static const int resizehints =
     0; /* 1 means respect size hints in tiled resizals */
@@ -107,10 +107,10 @@ static const Key keys[] = {
     {MODKEY, XK_o, incnmaster, {.i = -1}},
     {MODKEY | ShiftMask, XK_h, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_l, setmfact, {.f = +0.05}},
-    {MODKEY, XK_h, setcfact, {.f = +0.05}},
-    {MODKEY, XK_l, setcfact, {.f = -0.05}},
-    // {MODKEY, XK_h, setmfact, {.f = +0.05}},
-    // {MODKEY, XK_l, setmfact, {.f = -0.05}},
+    // {MODKEY, XK_h, setcfact, {.f = +0.05}},
+    // {MODKEY, XK_l, setcfact, {.f = -0.05}},
+    {MODKEY, XK_h, setmfact, {.f = +0.05}},
+    {MODKEY, XK_l, setmfact, {.f = -0.05}},
     {MODKEY | ShiftMask, XK_o, setcfact, {.f = 0.00}},
     {MODKEY | ShiftMask, XK_Return, zoom, {0}},
     /*{ MODKEY|Mod4Mask,              XK_u,      incrgaps,       {.i = +1 } },
