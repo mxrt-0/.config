@@ -19,6 +19,7 @@ static const char col_black[] = "#000000";
 static const char col_white[] = "#FFFFFF";
 // static const char col_green[] = "#00FF00";
 // static const char col_light_grey[] = "#999999";
+static const char col_pale_yellow[] = "#FFFFEA";
 static const char col_light_grey[] = "#BFBFBF";
 static const char col_dark_grey[] = "#3A3A3A";
 static const char *colors[][3] = {
