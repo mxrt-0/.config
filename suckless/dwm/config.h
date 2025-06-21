@@ -24,8 +24,8 @@ static const char col_light_grey[] = "#BFBFBF";
 static const char col_dark_grey[] = "#3A3A3A";
 static const char *colors[][3] = {
     /*               fg				 bg         border   */
-    [SchemeNorm] = {col_dark_grey, col_white, col_white},
-    [SchemeSel] = {col_light_grey, col_white, col_light_grey},
+    [SchemeNorm] = {col_dark_grey, col_pale_yellow, col_white},
+    [SchemeSel] = {col_light_grey, col_pale_yellow, col_light_grey},
 };
 /* tagging */
 static const char *tags[] = {"!", "@", "#"};
